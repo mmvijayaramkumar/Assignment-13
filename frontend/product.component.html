@@ -1,0 +1,26 @@
+ <mat-card>
+            <mat-card-header>
+                <mat-card-title> <h4> Register New Product </h4> </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <mat-form-field>
+                        <input [(ngModel)]="productData.productid" name="productid" matInput placeholder="Product ID" type="number">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <input [(ngModel)]="productData.productName" name="productName" matInput placeholder="Product Name" type="text">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <input [(ngModel)]="productData.productUnitprice" name="productUnitprice" matInput placeholder="Product Unit Price" type="number">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field style="width: 100%">
+                        <textarea [(ngModel)]="productData.productDescription" name="productDescription" matInput placeholder="Product Description"></textarea>
+                    </mat-form-field>
+                    <br>
+                    <button (click)="post()" mat-raised-button color="primary"> Add Product </button>
+                </form>
+            </mat-card-content>
+        </mat-card>
